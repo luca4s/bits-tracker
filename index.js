@@ -28,8 +28,7 @@ function updateData() {
             },
             error: function(e) {
                 console.log(e)
-            },
-            beforeSend: setHeader
+            }
         });
     });
 }
