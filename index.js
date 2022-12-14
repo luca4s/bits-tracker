@@ -18,8 +18,18 @@ const API = "https://badges.roblox.com/v1/badges/"
 function updateData() {
     Object.keys(badges).forEach(i => {
         var ID = badges[i];
-        $.get(`https://badges.roblox.com/v1/badges/${ID}`, function(data) {
-            console.log(data);
+        $.ajax({
+            url: `https://badges.roblox.com/v1/badges/${ID}`,
+            type: 'GET',
+            crossDomain: true,
+            dataType: 'jsonp',
+            success: function(data) {
+                console.log(data)
+            },
+            error: function(e) {
+                console.log(e)
+            },
+            beforeSend: setHeader
         });
     });
 }
