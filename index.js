@@ -7,12 +7,12 @@ const badges = {
     ["purple"]: 2129371024
 };
 const data = {
-    ["green"]: {["awardedyesterday"]: 0, ["awarded"]: 0,},
-    ["blue"]: {["awardedyesterday"]: 0, ["awarded"]: 0,},
-    ["bathroomflood"]: {["awardedyesterday"]: 0, ["awarded"]: 0,},
-    ["candyflood"]: {["awardedyesterday"]: 0, ["awarded"]: 0,},
-    ["bob"]: {["awardedyesterday"]: 0, ["awarded"]: 0,},
-    ["purple"]: {["awardedyesterday"]: 0, ["awarded"]: 0,}
+    ["green"]: {["awardedyesterday"]: 0, ["awarded"]: 0},
+    ["blue"]: {["awardedyesterday"]: 0, ["awarded"]: 0},
+    ["bathroomflood"]: {["awardedyesterday"]: 0, ["awarded"]: 0},
+    ["candyflood"]: {["awardedyesterday"]: 0, ["awarded"]: 0},
+    ["bob"]: {["awardedyesterday"]: 0, ["awarded"]: 0},
+    ["purple"]: {["awardedyesterday"]: 0, ["awarded"]: 0}
 };
 const API = "https://badges.roblox.com/v1/badges/"
 function updateData() {
@@ -28,3 +28,4 @@ function updateData() {
         };
     });
 }
+updateData()
