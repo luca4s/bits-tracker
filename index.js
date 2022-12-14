@@ -18,14 +18,9 @@ const API = "https://badges.roblox.com/v1/badges/"
 function updateData() {
     Object.keys(badges).forEach(i => {
         var ID = badges[i];
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", `https://badges.roblox.com/v1/badges/${ID}`);
-        xhttp.send();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-               console.log(xhttp.responseText)
-            }
-        };
+        $.get(`https://badges.roblox.com/v1/badges/${ID}`, function(data) {
+            console.log(data);
+        });
     });
 }
-updateData()
+updateData();
