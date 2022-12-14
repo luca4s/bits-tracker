@@ -18,7 +18,7 @@ const API = "https://badges.roblox.com/v1/badges/"
 function updateData() {
     Object.keys(badges).forEach(i => {
         var ID = badges[i];
-        var xhttp = XMLHttpRequest();
+        var xhttp = new XMLHttpRequest();
         xhttp.open("GET", `https://badges.roblox.com/v1/badges/${ID}`);
         xhttp.send();
         xhttp.onreadystatechange = function() {
